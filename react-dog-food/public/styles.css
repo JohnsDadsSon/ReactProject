@@ -1,0 +1,9 @@
+.box {
+  display: grid;
+  position: relative;
+  width: 400px;
+  height: 450px;
+  /* width: 100%;
+  height: 100%; change back once many cards introduced*/
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+}
