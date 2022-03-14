@@ -7,3 +7,38 @@
   height: 100%; change back once many cards introduced*/
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
 }
+.input-hidden {
+  display: none;
+}
+.weight {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+.weightVarients {
+  display: flex;
+  padding: 10px;
+  align-items: center;
+}
+.paw {
+  display: flex;
+  width: 24px;
+}
+.star {
+  display: inline-flex;
+  width: 20px;
+}
+.addToCart {
+  display: block;
+  background-color: #00d4ff;
+  font-size: 85%;
+  width: fit-content;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 4px;
+  margin: 10px;
+  position: absolute;
+  right: 10px;
+  bottom: 5px;
+}
