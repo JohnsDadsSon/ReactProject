@@ -1,5 +1,6 @@
 import React from "react";
-function Title() {
-  return <div className="productTitle">test</div>;
+import products from "./products";
+function Title(props) {
+  return <div className="productTitle">{props.name}</div>;
 }
 export default Title;

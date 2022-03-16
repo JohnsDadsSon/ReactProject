@@ -1,5 +1,5 @@
 import React from "react";
-
+import products from "./products";
 function AddToCart() {
   return (
     <div className="priceAndAdd">

@@ -1,23 +1,23 @@
 import React from "react";
-import Weights from "../components/Weights";
-import StarRating from "../components/StarRating";
-import AddToCart from "../components/AddToCart";
+import Weights from "./Weights";
+import StarRating from "./StarRating";
+import AddToCart from "./AddToCart";
 import ImageAndDiscount from "./ImageAndDiscount";
 import Availability from "./Availability";
 import Title from "./Title";
-
-function Card() {
+import products from "./products";
+function Cards(props) {
   return (
     <div className="box">
-      <ImageAndDiscount />
+      <ImageAndDiscount image={props.image} discount={props.discount} />
       <div className="ratingAndAvailability">
         <StarRating />
         <Availability />
       </div>
-      <Title />
+      <Title name={props.name} />
       <Weights />
       <AddToCart />
     </div>
   );
 }
-export default Card;
+export default Cards;

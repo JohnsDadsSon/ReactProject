@@ -1,10 +1,10 @@
 import React from "react";
-
-function ImageAndDiscount() {
+import products from "./products";
+function ImageAndDiscount(props) {
   return (
     <div>
-      <div className="percentDiscount">-20%</div>
-      <img className="productImage" src="../images/dogFood1.jpg" />
+      <div className="percentDiscount">{props.discount}</div>
+      <img className="productImage" src={props.image} />
     </div>
   );
 }
