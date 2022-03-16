@@ -103,3 +103,11 @@ body {
   grid-gap: 20px;
   grid-template-columns: repeat(4, auto);
 }
+#stockText {
+  border: none;
+  text-align: left;
+  display: flex;
+  font-size: 11pt;
+  margin: auto;
+  width: 100px;
+}

@@ -12,7 +12,7 @@ function Cards(props) {
       <ImageAndDiscount image={props.image} discount={props.discount} />
       <div className="ratingAndAvailability">
         <StarRating />
-        <Availability />
+        <Availability availability={props.availability} />
       </div>
       <Title name={props.name} />
       <Weights />
