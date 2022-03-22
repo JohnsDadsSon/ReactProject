@@ -4,14 +4,7 @@ function Weights() {
   return (
     <div className="weightVarients">
       <div className="weight">
-        <input
-          type="radio"
-          id="paw1"
-          className="input-hidden"
-
-          // defaultChecked={false}
-          // onInput={console.log("hey!")}
-        />
+        <input type="radio" id="paw1" className="input-hidden" />
         <label htmlFor="paw1">
           <img className="paw" id="paw1image" src="../images/paw.png" alt="" />
         </label>
