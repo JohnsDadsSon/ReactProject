@@ -1,3 +1,11 @@
+// To-Do: Figure out radio buttons;
+//        issues with setAttribute() method,
+//        which seems required for changing paw colour.
+//        If clarified, can complete buttons this afternoon.
+//
+//        Once project reviewed and finalised,
+//        discuss next/final project.
+
 import React from "react";
 import ReactDOM from "react-dom";
 import Cards from "./components/Cards";
