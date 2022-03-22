@@ -6,18 +6,29 @@ import ImageAndDiscount from "./ImageAndDiscount";
 import Availability from "./Availability";
 import Title from "./Title";
 import products from "./products";
-function Cards(props) {
+
+const Cards = () => {
+
+  return (
+    <div>
+{products.map((product)=> {
   return (
     <div className="box">
-      <ImageAndDiscount image={props.image} discount={props.discount} />
-      <div className="ratingAndAvailability">
-        <StarRating />
-        <Availability availability={props.availability} />
-      </div>
-      <Title name={props.name} />
-      <Weights />
-      <AddToCart />
+      <Title name={product.description} />
     </div>
+  )
+})}
+    </div>
+    // <div className="box">
+    //   <ImageAndDiscount image={props.image} discount={props.discount} />
+    //   <div className="ratingAndAvailability">
+    //     <StarRating />
+    //     <Availability availability={props.availability} />
+    //   </div>
+    //   <Title name={props.name} />
+    //   <Weights />
+    //   <AddToCart />
+    // </div>
   );
 }
 export default Cards;

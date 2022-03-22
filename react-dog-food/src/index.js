@@ -12,7 +12,8 @@ import Cards from "./components/Cards";
 import products from "./components/products";
 ReactDOM.render(
   <div className="fourbytwo">
-    <Cards
+    <Cards />
+    {/* <Cards
       name={products[0].description}
       discount={products[0].discount}
       image={products[0].image}
@@ -47,7 +48,7 @@ ReactDOM.render(
       discount={products[5].discount}
       image={products[5].image}
       availability={products[5].inStore}
-    />
+    /> */}
   </div>,
   document.getElementById("root")
 );
