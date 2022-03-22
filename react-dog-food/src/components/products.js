@@ -1,6 +1,6 @@
 const products = [
   {
-    description: "Pedigree Adult Complete Nutrition Bonus Size",
+    description: "Pedigree Adult Complete Bonus Size",
     discount: "-10%",
     image: "/images/dogFood1.jpg",
     inStore: true,
