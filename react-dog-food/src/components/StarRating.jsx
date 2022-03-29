@@ -1,6 +1,6 @@
 import React from "react";
 import products from "./products";
-function StarRating() {
+const StarRating = () => {
   return (
     <div className="starRating">
       <input type="radio" className="input-hidden" id="star1" />
@@ -25,7 +25,7 @@ function StarRating() {
       </label>
     </div>
   );
-}
+};
 
 export default StarRating;
 

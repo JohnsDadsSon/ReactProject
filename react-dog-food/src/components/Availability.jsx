@@ -3,7 +3,7 @@ import products from "./products";
 var availabilityCheck = document.getElementById("availableCheck");
 var display = document.getElementById("stockText");
 
-function Availability(props) {
+const Availability = (props) => {
   if (props.availability == true) {
     return (
       <div className="availability">
@@ -23,6 +23,6 @@ function Availability(props) {
       </div>
     );
   }
-}
+};
 
 export default Availability;

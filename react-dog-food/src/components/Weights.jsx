@@ -1,6 +1,6 @@
 import React from "react";
 import products from "./products";
-function Weights() {
+const Weights = () => {
   return (
     <div className="weightVarients">
       <div className="weight">
@@ -33,7 +33,7 @@ function Weights() {
       </div>
     </div>
   );
-}
+};
 
 export default Weights;
 
