@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Weights from "./Weights";
 import StarRating from "./StarRating";
 import AddToCart from "./AddToCart";

@@ -35,7 +35,6 @@ body {
 }
 .addToCart {
   display: block;
-  background-color: #00d4ff;
   font-size: 85%;
   width: fit-content;
   color: white;
@@ -45,6 +44,7 @@ body {
   position: absolute;
   right: 10px;
   bottom: 5px;
+  border: 0px;
 }
 .addToCart:hover {
   cursor: pointer;
