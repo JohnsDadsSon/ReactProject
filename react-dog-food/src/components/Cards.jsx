@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Weights from "./Weights";
 import StarRating from "./StarRating";
 import AddToCart from "./AddToCart";
@@ -8,11 +8,26 @@ import Title from "./Title";
 import products from "./products";
 
 const Cards = () => {
+  let productData = [];
+
+  useEffect(() => {
+    fetch("https://jsonplaceholder.typicode.com/posts")
+      .then((res) => {
+        return res.json();
+      })
+      .then((json) => {
+        productData = [...json];
+        console.log("Test 2: " + productData);
+      });
+  }, []);
+
+  console.log("Test 1: " + productData);
+
   return (
     <div className="fourbytwo">
       {products.map((product) => {
         return (
-          <div className="box">
+          <div className="box" key={product.id}>
             <ImageAndDiscount
               discount={product.discount}
               image={product.image}
@@ -21,6 +36,7 @@ const Cards = () => {
               <StarRating />
               <Availability availability={product.inStore} />
             </div>
+
             <Title name={product.description} />
             <Weights />
             <AddToCart />
@@ -28,16 +44,6 @@ const Cards = () => {
         );
       })}
     </div>
-    // <div className="box">
-    //   <ImageAndDiscount image={props.image} discount={props.discount} />
-    //   <div className="ratingAndAvailability">
-    //     <StarRating />
-    //     <Availability availability={props.availability} />
-    //   </div>
-    //   <Title name={props.name} />
-    //   <Weights />
-    //   <AddToCart />
-    // </div>
   );
 };
 export default Cards;

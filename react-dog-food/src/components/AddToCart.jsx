@@ -1,22 +1,22 @@
 import React, { useState } from "react";
 import products from "./products";
 const AddToCart = () => {
-  const [isMouseOverWeight, setMouseOverWeight] = useState(false);
+  const [isMouseOverCart, setMouseOverCart] = useState(false);
 
-  function handleMouseOverWeight() {
-    setMouseOverWeight(true);
+  function handleMouseOverCart() {
+    setMouseOverCart(true);
   }
-  function handleMouseOutWeight() {
-    setMouseOverWeight(false);
+  function handleMouseOutCart() {
+    setMouseOverCart(false);
   }
   return (
     <div className="priceAndAdd">
       <div className="price">$100</div>
       <button
         className="addToCart"
-        style={{ backgroundColor: isMouseOverWeight ? "#0099dd" : "#00d4ff" }}
-        onMouseOver={handleMouseOverWeight}
-        onMouseOut={handleMouseOutWeight}
+        style={{ backgroundColor: isMouseOverCart ? "#0099dd" : "#00d4ff" }}
+        onMouseOver={handleMouseOverCart}
+        onMouseOut={handleMouseOutCart}
       >
         Add to cart
       </button>

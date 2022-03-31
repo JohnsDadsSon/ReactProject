@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import products from "./products";
+
 const Weights = () => {
   return (
     <div className="weightVarients">
@@ -36,23 +37,3 @@ const Weights = () => {
 };
 
 export default Weights;
-
-// function pawOver(ele) {
-//   if (ele === 1) {
-//     document
-//       .getElementById("paw1image")
-//       .setAttribute("src", "../images/pawblue.png");
-//   } else if (ele === 2) {
-//     document
-//       .getElementById("paw2image")
-//       .setAttribute("src", "../images/pawblue.png");
-//   } else if (ele === 3) {
-//     document
-//       .getElementById("paw3image")
-//       .setAttribute("src", "../images/pawblue.png");
-//   } else if (ele === 4) {
-//     document
-//       .getElementById("paw4image")
-//       .setAttribute("src", "../images/pawblue.png");
-//   }
-// }
