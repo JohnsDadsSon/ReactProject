@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import products from "./products";
 const AddToCart = () => {
   const [isMouseOverCart, setMouseOverCart] = useState(false);
-
+  function handleClick() {
+    // setCards();
+  }
   function handleMouseOverCart() {
     setMouseOverCart(true);
   }
@@ -17,8 +19,9 @@ const AddToCart = () => {
         style={{ backgroundColor: isMouseOverCart ? "#0099dd" : "#00d4ff" }}
         onMouseOver={handleMouseOverCart}
         onMouseOut={handleMouseOutCart}
+        onClick={handleClick}
       >
-        Add to cart
+        {isMouseOverCart ? "Are you sure?" : "Delete Item"}
       </button>
     </div>
   );

@@ -8,13 +8,21 @@ import Title from "./Title";
 import products from "./products";
 
 const Cards = () => {
-  let productData = [];
   const [itemState, setItemState] = useState([]);
   useEffect(() => {
     fetch("https://jsonplaceholder.typicode.com/photos?_start=0&_limit=6")
       .then((response) => response.json())
       .then((data) => setItemState(data));
   }, []);
+
+  // const removeCard = (arr, item) => {
+  //   let newArray = [...arr];
+  //   const index = newArray.findIndex(/*search by id*/);
+  //   if (index !== -1) {
+  //     newArray.splice(index, 1);
+  //     return newArray;
+  //   }
+  // };
 
   return (
     <div className="fourbytwo">
