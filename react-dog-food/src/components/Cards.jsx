@@ -9,35 +9,25 @@ import products from "./products";
 
 const Cards = () => {
   let productData = [];
-
+  const [itemState, setItemState] = useState([]);
   useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/posts")
-      .then((res) => {
-        return res.json();
-      })
-      .then((json) => {
-        productData = [...json];
-        console.log("Test 2: " + productData);
-      });
+    fetch("https://jsonplaceholder.typicode.com/photos?_start=0&_limit=6")
+      .then((response) => response.json())
+      .then((data) => setItemState(data));
   }, []);
-
-  console.log("Test 1: " + productData);
 
   return (
     <div className="fourbytwo">
-      {products.map((product) => {
+      {itemState.map((product) => {
         return (
           <div className="box" key={product.id}>
-            <ImageAndDiscount
-              discount={product.discount}
-              image={product.image}
-            />
+            <ImageAndDiscount image={product.url} />
             <div className="ratingAndAvailability">
               <StarRating />
-              <Availability availability={product.inStore} />
+              {/* <Availability availability={product.inStore} /> */}
             </div>
 
-            <Title name={product.description} />
+            <Title name={product.title} />
             <Weights />
             <AddToCart />
           </div>
