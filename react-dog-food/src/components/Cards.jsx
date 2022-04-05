@@ -15,6 +15,11 @@ const Cards = () => {
       .then((data) => setItemState(data));
   }, []);
 
+  const [isButtonClicked, setButtonClicked] = useState(false);
+  function handleButtonClick() {
+    setButtonClicked(true);
+  }
+
   let newArray = [...itemState];
   function deleteCard(id) {
     newArray.splice(
@@ -23,25 +28,31 @@ const Cards = () => {
     );
     setItemState(newArray);
   }
+  if (isButtonClicked == true) {
+    return (
+      <div className="fourbytwo">
+        {itemState.map((product) => {
+          return (
+            <div className="box" key={product.id}>
+              <ImageAndDiscount image={product.url} />
+              <div className="ratingAndAvailability">
+                <StarRating />
+                {/* <Availability availability={product.inStore} /> */}
+              </div>
 
-  return (
-    <div className="fourbytwo">
-      {itemState.map((product) => {
-        return (
-          <div className="box" key={product.id}>
-            <ImageAndDiscount image={product.url} />
-            <div className="ratingAndAvailability">
-              <StarRating />
-              {/* <Availability availability={product.inStore} /> */}
+              <Title name={product.title} />
+              <Weights />
+              <AddToCart onDelete={deleteCard} idTest={product.id} />
             </div>
-
-            <Title name={product.title} />
-            <Weights />
-            <AddToCart onDelete={deleteCard} idTest={product.id} />
-          </div>
-        );
-      })}
-    </div>
-  );
+          );
+        })}
+      </div>
+    );
+  } else
+    return (
+      <button className="homeButton" onClick={handleButtonClick}>
+        <span className="text">Load product cards</span>
+      </button>
+    );
 };
 export default Cards;
