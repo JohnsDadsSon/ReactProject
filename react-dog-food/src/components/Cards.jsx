@@ -15,14 +15,14 @@ const Cards = () => {
       .then((data) => setItemState(data));
   }, []);
 
-  // const removeCard = (arr, item) => {
-  //   let newArray = [...arr];
-  //   const index = newArray.findIndex(/*search by id*/);
-  //   if (index !== -1) {
-  //     newArray.splice(index, 1);
-  //     return newArray;
-  //   }
-  // };
+  let newArray = [...itemState];
+  function deleteCard(id) {
+    newArray.splice(
+      itemState.findIndex((i) => i.id === id),
+      1
+    );
+    setItemState(newArray);
+  }
 
   return (
     <div className="fourbytwo">
@@ -37,7 +37,7 @@ const Cards = () => {
 
             <Title name={product.title} />
             <Weights />
-            <AddToCart />
+            <AddToCart onDelete={deleteCard} idTest={product.id} />
           </div>
         );
       })}
